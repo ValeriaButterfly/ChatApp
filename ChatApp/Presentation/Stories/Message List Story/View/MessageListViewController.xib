@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MessageListViewController" customModule="ChatApp" customModuleProvider="target">
+            <connections>
+                <outlet property="informationLabel" destination="4Wd-QR-Hem" id="lh8-Pb-IN8"/>
+                <outlet property="inputContainerViewBottomConstraint" destination="vNy-XP-fIR" id="Hbj-eg-kWQ"/>
+                <outlet property="inputTextView" destination="ewe-8M-M3x" id="rZk-FO-R6G"/>
+                <outlet property="inputTextViewContainer" destination="mYY-wE-uUa" id="GVo-Af-fxG"/>
+                <outlet property="tableView" destination="4DN-rB-9te" id="bNI-yg-cJ3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4DN-rB-9te">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="487"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No messages yet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wd-QR-Hem">
+                    <rect key="frame" x="97.5" y="274.5" width="125" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.54200071100000002" green="0.54166316989999996" blue="0.55758100749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mYY-wE-uUa">
+                    <rect key="frame" x="0.0" y="487" width="320" height="81"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" scrollEnabled="NO" text="Your message here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ewe-8M-M3x">
+                            <rect key="frame" x="41" y="17" width="238" height="33"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="textColor" red="0.51360511779999996" green="0.51338559390000005" blue="0.53405487539999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" smartDashesType="no"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="AT0-DX-Wak"/>
+                            </connections>
+                        </textView>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSC-OG-p5s">
+                            <rect key="frame" x="12" y="24" width="19" height="22"/>
+                            <state key="normal" image="addIcon"/>
+                            <connections>
+                                <action selector="sendImageAction:" destination="-1" eventType="touchUpInside" id="OGY-Pt-ppo"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1SU-pr-Kje">
+                            <rect key="frame" x="289" y="24" width="19" height="22"/>
+                            <state key="normal" image="sendIcon"/>
+                            <connections>
+                                <action selector="sendMessageAction:" destination="-1" eventType="touchUpInside" id="yzh-v0-xYD"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="inputTextMessageContainterColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ewe-8M-M3x" secondAttribute="bottom" constant="31" id="E54-gZ-q3D"/>
+                        <constraint firstItem="ewe-8M-M3x" firstAttribute="leading" secondItem="pSC-OG-p5s" secondAttribute="trailing" constant="10" id="Jet-da-WHZ"/>
+                        <constraint firstItem="1SU-pr-Kje" firstAttribute="leading" secondItem="ewe-8M-M3x" secondAttribute="trailing" constant="10" id="JjN-8a-w0d"/>
+                        <constraint firstItem="pSC-OG-p5s" firstAttribute="bottom" secondItem="ewe-8M-M3x" secondAttribute="bottom" constant="-4" id="LWI-Bf-R9s"/>
+                        <constraint firstAttribute="trailing" secondItem="1SU-pr-Kje" secondAttribute="trailing" constant="12" id="XDB-5m-Yke"/>
+                        <constraint firstItem="pSC-OG-p5s" firstAttribute="leading" secondItem="mYY-wE-uUa" secondAttribute="leading" constant="12" id="eVe-vT-2HZ"/>
+                        <constraint firstItem="1SU-pr-Kje" firstAttribute="bottom" secondItem="ewe-8M-M3x" secondAttribute="bottom" constant="-4" id="lGm-pr-KgF"/>
+                        <constraint firstItem="ewe-8M-M3x" firstAttribute="top" secondItem="mYY-wE-uUa" secondAttribute="top" constant="17" id="lTV-uW-nQw"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.96938401460000001" green="0.96954256299999997" blue="0.96935027839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="mYY-wE-uUa" firstAttribute="top" secondItem="4DN-rB-9te" secondAttribute="bottom" id="4XA-Ds-bUI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4DN-rB-9te" secondAttribute="trailing" id="666-he-7qs"/>
+                <constraint firstItem="4DN-rB-9te" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="IU5-Aw-aLs"/>
+                <constraint firstItem="4Wd-QR-Hem" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KaS-S8-aUO"/>
+                <constraint firstItem="4DN-rB-9te" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WAF-Jk-p61"/>
+                <constraint firstItem="mYY-wE-uUa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kru-2m-6id"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mYY-wE-uUa" secondAttribute="trailing" id="lcv-ET-edy"/>
+                <constraint firstAttribute="bottom" secondItem="mYY-wE-uUa" secondAttribute="bottom" id="vNy-XP-fIR"/>
+                <constraint firstItem="4Wd-QR-Hem" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="x1i-l1-KvX"/>
+            </constraints>
+            <point key="canvasLocation" x="86.25" y="14.788732394366198"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="addIcon" width="19" height="19"/>
+        <image name="sendIcon" width="19" height="19"/>
+        <namedColor name="inputTextMessageContainterColor">
+            <color red="0.9649999737739563" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

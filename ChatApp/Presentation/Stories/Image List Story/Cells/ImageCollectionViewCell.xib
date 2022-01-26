@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageCollectionViewCell" customModule="ChatApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ImageCollectionViewCell" reuseIdentifier="ImageCollectionViewCell" id="gTV-IL-0wX" customClass="ImageCollectionViewCell" customModule="ChatApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8Z-fc-HLe">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="Ai4-EP-AX9">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ai4-EP-AX9" firstAttribute="leading" secondItem="n8Z-fc-HLe" secondAttribute="leading" id="DuF-WF-n1o"/>
+                            <constraint firstItem="Ai4-EP-AX9" firstAttribute="top" secondItem="n8Z-fc-HLe" secondAttribute="top" id="KlG-bi-Hfv"/>
+                            <constraint firstAttribute="bottom" secondItem="Ai4-EP-AX9" secondAttribute="bottom" id="MNc-Yx-lWD"/>
+                            <constraint firstAttribute="trailing" secondItem="Ai4-EP-AX9" secondAttribute="trailing" id="tiT-ma-7jj"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="n8Z-fc-HLe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Rfs-Qf-4jM"/>
+                <constraint firstItem="n8Z-fc-HLe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="c0r-R1-5DD"/>
+                <constraint firstAttribute="bottom" secondItem="n8Z-fc-HLe" secondAttribute="bottom" id="rqY-oM-psb"/>
+                <constraint firstAttribute="trailing" secondItem="n8Z-fc-HLe" secondAttribute="trailing" id="y9P-YD-ksh"/>
+            </constraints>
+            <connections>
+                <outlet property="backgroundView" destination="n8Z-fc-HLe" id="B2C-vm-VwE"/>
+                <outlet property="imageView" destination="Ai4-EP-AX9" id="4g5-Nb-eEj"/>
+            </connections>
+            <point key="canvasLocation" x="14" y="132"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="imagePlaceholder" width="1200" height="800"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

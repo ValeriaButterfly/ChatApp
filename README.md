@@ -1,0 +1,1 @@
+[![ChatAppCI](https://github.com/TFS-iOS/chat-app-ValeriaButterfly/actions/workflows/.github.yml/badge.svg)](https://github.com/TFS-iOS/chat-app-ValeriaButterfly/actions/workflows/.github.yml)

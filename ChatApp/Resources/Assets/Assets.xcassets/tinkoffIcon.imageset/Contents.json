@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "tinkoffIcon.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
